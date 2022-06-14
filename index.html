@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title translate="no">Music Player</title>
+    <!--ICONS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <!--CSS-->
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <p>Music<span>Player</span><i class="bi bi-play-fill" id="logo"></i></p>
+        </nav>
+    </header>
+    <main>
+        <div class="container_player">
+            <div class="info">
+                <p> Tocando <a id="numbindex">x</a> de <span id="max-length">y</span></p>
+                <h1 id="artist">artista</h1>
+                <h2 id="music">musica</h2>
+                <h3 id="album">album</h3>
+            </div>
+            <div class="duration">
+                    <input type="range" max="100" min="1" name="" id="duration" value="0">
+                <div class="time">
+                    <p id="initial-time">00:00</p>
+                    <p id="final-time">--:--</p>
+                </div>
+            </div>
+             <div class="buttons">
+                 <button id="random" onclick="random()"><i class="bi bi-shuffle"></i></button>
+                 <button id="prev" onclick="prev()"><i class="bi bi-skip-start-fill"></i></button>
+                 <button id="play-pause" onclick="play_pause()"><i class="bi bi-play-fill" id="play"></i><i class="bi bi-pause" id="pause"></i></button>
+                 <button id="next" onclick="next()"><i class="bi bi-skip-end-fill"></i></button>
+                 <button id="repeat" onclick="repeat()"><i class="bi bi-arrow-clockwise"></i></button>
+             </div>
+        </div>
+        <div class="album_image">
+            <img src="" alt="" id="album-image">
+        </div>
+        <audio src="" controls preload="metadata"></audio>
+    </main>
+    <section class="playlist">
+        <h1>Sua Playlist <i class="bi bi-music-note-list"></i></h1>
+        <div id="cont-music">
+            
+        </div>
+    </section>
+    
+    <script src="assets/playlist.js"></script>
+    <script src="assets/player.js"></script>
+</body>
+</html>
